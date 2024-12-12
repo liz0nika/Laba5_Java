@@ -13,13 +13,13 @@
   
 Клас має кілька методів:
 
-  конструктор Appliance(String name, int power, int emRange) ініціалізує прилад з заданими параметрами.
-  
-  геттери getName(), getPower(), isOn(), getEmRange() для доступу до значень властивостей.
-  
-  методи turnOn() і turnOff() для зміни стану приладу (увімкнення/вимкнення).
-  
-  метод toString(), що повертає рядкове представлення приладу для зручності виведення інформації.
+      конструктор Appliance(String name, int power, int emRange) ініціалізує прилад з заданими параметрами.
+      
+      геттери getName(), getPower(), isOn(), getEmRange() для доступу до значень властивостей.
+      
+      методи turnOn() і turnOff() для зміни стану приладу (увімкнення/вимкнення).
+      
+      метод toString(), що повертає рядкове представлення приладу для зручності виведення інформації.
   
 <img width="614" alt="Знімок екрана 2024-12-12 о 17 04 28" src="https://github.com/user-attachments/assets/c4d35b0a-e1e0-4d4c-b3c1-ffbf0f6a1ac2" />
 
@@ -27,19 +27,19 @@
 
 Клас ApplianceManager керує колекцією приладів і містить такі основні методи:
 
-  appliances - список приладів (List<Appliance>), що зберігає всі додані прилади.
-  
-  addAppliance(Appliance appliance) додає новий прилад до списку.
-  
-  turnOnAppliance(int index) увімкнути прилад за індексом у списку. Якщо індекс знаходиться в допустимих межах, викликається метод turnOn() у відповідному приладі.
-  
-  calculateTotalPower() підраховує загальну потужність увімкнених приладів (stream() для перетворення списку приладів в потік; filter(Appliance::isOn) для вибору тільки увімкнених приладів; mapToInt(Appliance::getPower) для отримання потужності кожного увімкненого приладу; sum() для підсумовування потужностей)
-  
-  sortAppliancesByPower() сортує прилади за потужністю в порядку зростання.
-  
-  findAppliancesByEmRange(int minRange, int maxRange) пошук приладів, рівень електромагнітного випромінювання яких знаходиться в межах заданого діапазону (filter() для вибору приладів, у яких emRange знаходиться між minRange та maxRange; collect(Collectors.toList())` для перетворення результату в список)
-  
-  displayAppliances() виводить інформацію про всі прилади на екран.
+      appliances - список приладів (List<Appliance>), що зберігає всі додані прилади.
+      
+      addAppliance(Appliance appliance) додає новий прилад до списку.
+      
+      turnOnAppliance(int index) увімкнути прилад за індексом у списку. Якщо індекс знаходиться в допустимих межах, викликається метод turnOn() у відповідному приладі.
+      
+      calculateTotalPower() підраховує загальну потужність увімкнених приладів (stream() для перетворення списку приладів в потік; filter(Appliance::isOn) для вибору тільки увімкнених приладів; mapToInt(Appliance::getPower) для отримання потужності кожного увімкненого приладу; sum() для підсумовування потужностей)
+      
+      sortAppliancesByPower() сортує прилади за потужністю в порядку зростання.
+      
+      findAppliancesByEmRange(int minRange, int maxRange) пошук приладів, рівень електромагнітного випромінювання яких знаходиться в межах заданого діапазону (filter() для вибору приладів, у яких emRange знаходиться між minRange та maxRange; collect(Collectors.toList())` для перетворення результату в список)
+      
+      displayAppliances() виводить інформацію про всі прилади на екран.
   
 <img width="887" alt="Знімок екрана 2024-12-12 о 17 03 03" src="https://github.com/user-attachments/assets/d7c8e401-e26a-4025-a139-b3c06d146d94" />
 
